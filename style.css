@@ -1,0 +1,560 @@
+:root {
+    --bg-dark: #0b0f19;
+    --navbar-bg: #0f1422;
+    --card-dark: #111827;
+    --card-inner: #19243a;
+    --border-dark: #243149;
+    --text-light: #f3f4f6;
+    --text-muted: #94a3b8;
+    --primary: #6258f5;
+    --primary-hover: #5145e8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1150px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.brand-badge {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #7067ff, #5145e8);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+}
+
+.navbar h1 {
+    font-size: 1.3rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar small {
+    color: #64748b !important;
+    font-size: 0.75rem;
+}
+
+.fs-7 {
+    font-size: 0.8rem;
+}
+
+/* MAIN CARDS */
+
+.dark-card {
+    background-color: var(--card-dark);
+    border: 1px solid var(--border-dark) !important;
+    color: var(--text-light);
+    border-radius: 15px;
+}
+
+/* SEARCH AND FILTER */
+
+.form-label {
+    color: #a9bad2 !important;
+    font-size: 0.8rem;
+    margin-bottom: 7px;
+}
+
+.form-control,
+.form-select {
+    background-color: #172236 !important;
+    border: 1px solid #2b3a53 !important;
+    color: #f8fafc !important;
+    border-radius: 9px;
+    min-height: 41px;
+    font-size: 0.85rem;
+}
+
+.form-control::placeholder {
+    color: #7185a3 !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #172236 !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(98, 88, 245, 0.15) !important;
+    color: white !important;
+}
+
+.form-select option {
+    background-color: #172236;
+    color: white;
+}
+
+.input-group-text {
+    background-color: #172236 !important;
+    border-color: #2b3a53 !important;
+    color: #8ba3c1 !important;
+}
+
+/* ROOM CARDS */
+
+#roomContainer {
+    align-items: stretch;
+}
+
+.room-card {
+    background-color: var(--card-dark);
+    border: 1px solid var(--border-dark) !important;
+    color: var(--text-light);
+    border-radius: 15px;
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-3px);
+    border-color: #394968 !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18) !important;
+}
+
+.room-card h5 {
+    color: #f8fafc !important;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.room-card small {
+    color: #9aabc4 !important;
+}
+
+.room-card .text-muted {
+    color: #91a4bf !important;
+}
+
+/* TIMETABLE */
+
+.room-card .my-2 {
+    background-color: var(--card-inner) !important;
+    border-radius: 10px;
+    padding: 14px !important;
+}
+
+.room-card .my-2 small {
+    color: #91b6e5 !important;
+    font-size: 0.68rem !important;
+}
+
+.room-card .my-2 .small {
+    color: #f1f5f9 !important;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* FACILITIES */
+
+.facility-badge {
+    background-color: #1c293d;
+    color: #a9c5e8;
+    font-size: 0.73rem;
+    border: 1px solid #30415a;
+    padding: 5px 9px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.room-card .d-flex.flex-wrap {
+    gap: 5px !important;
+}
+
+/* STATUS */
+
+.badge-vacant {
+    background-color: rgba(16, 185, 129, 0.12);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    font-weight: 700;
+    font-size: 0.72rem;
+}
+
+.badge-occupied {
+    background-color: rgba(239, 68, 68, 0.12);
+    color: #fb7185;
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    font-weight: 700;
+    font-size: 0.72rem;
+}
+
+.badge-reserved {
+    background-color: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    font-weight: 700;
+    font-size: 0.72rem;
+}
+
+/* BUTTONS */
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background-color: #059669 !important;
+    border-color: #059669 !important;
+    color: white !important;
+}
+
+.btn-success:hover {
+    background-color: #047857 !important;
+    border-color: #047857 !important;
+}
+
+.btn-outline-light {
+    border-color: #a3b1c5 !important;
+    color: #f8fafc !important;
+}
+
+.btn-outline-light:hover {
+    background-color: #1e293b !important;
+    color: white !important;
+}
+
+.btn-secondary {
+    background-color: #263247 !important;
+    border-color: #35445b !important;
+    color: #a8b5c8 !important;
+}
+
+.btn {
+    transition: all 0.2s ease;
+}
+
+/* ROOM FOOTER */
+
+.room-card .mt-auto {
+    border-top: 1px solid #263247;
+    padding-top: 14px !important;
+    margin-top: auto !important;
+}
+
+.room-card .mt-auto .small {
+    color: #64748b !important;
+    font-size: 0.78rem;
+}
+
+/* ROOM COUNT */
+
+#roomCountLabel {
+    background-color: #1b2639 !important;
+    border: 1px solid #2b3a51 !important;
+    color: #a9c5e8 !important;
+    font-size: 0.75rem;
+}
+
+/* ADMIN TABLE */
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #cbd5e1;
+    --bs-table-border-color: #283449;
+    --bs-table-hover-bg: #1b2639;
+    --bs-table-hover-color: #f8fafc;
+}
+
+.table thead th {
+    background-color: #19243a;
+    color: #a9c5e8;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 13px;
+}
+
+.table tbody td {
+    padding: 13px;
+    font-size: 0.82rem;
+}
+
+.table-dark {
+    --bs-table-bg: transparent;
+}
+
+/* ADMIN */
+
+#adminView .dark-card {
+    background-color: var(--card-dark);
+}
+
+#adminView h5 {
+    font-size: 1rem;
+}
+
+/* MODAL */
+
+.modal-content {
+    background-color: var(--card-dark) !important;
+    color: var(--text-light);
+    border: 1px solid #344258 !important;
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #283449 !important;
+}
+
+.modal-body {
+    background-color: var(--card-dark);
+}
+
+.modal-title {
+    color: #f8fafc !important;
+}
+
+.btn-close-white {
+    filter: brightness(0) invert(1);
+}
+
+/* FILTER CARD */
+
+#studentView > .dark-card {
+    padding: 24px !important;
+}
+
+/* LEGEND */
+
+#studentView .small.px-3 {
+    background-color: #151e30 !important;
+    border-color: #27354b !important;
+    color: #a9bad2;
+}
+
+#studentView .text-success {
+    color: #34d399 !important;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #344258;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4b5d78;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .navbar h1 {
+        font-size: 1.1rem;
+    }
+
+    .navbar small {
+        font-size: 0.68rem;
+    }
+
+    #toggleRoleBtn {
+        font-size: 0.75rem;
+        padding: 7px 12px !important;
+    }
+
+    #studentView > .dark-card {
+        padding: 17px !important;
+    }
+
+    .room-card {
+        padding: 17px !important;
+    }
+
+    .room-card h5 {
+        font-size: 0.95rem;
+    }
+
+    .room-card .mt-auto {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .room-card .mt-auto button {
+        font-size: 0.75rem;
+    }
+
+    #studentView .d-flex.flex-column.flex-md-row {
+        align-items: flex-start !important;
+    }
+
+    #studentView .small.px-3 {
+        flex-wrap: wrap;
+        gap: 10px !important;
+    }
+
+    #adminView .card {
+        padding: 17px !important;
+    }
+
+    .table {
+        min-width: 650px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .navbar .container {
+        gap: 12px;
+    }
+
+    .brand-badge {
+        width: 36px;
+        height: 36px;
+    }
+
+    .room-card .badge {
+        font-size: 0.65rem;
+    }
+
+    .facility-badge {
+        font-size: 0.68rem;
+    }
+
+    .room-card .my-2 {
+        padding: 11px !important;
+    }
+
+    #roomCountLabel {
+        display: inline-block;
+        margin-top: 5px;
+    }
+}
+
+/* MODERN AUTH CARD STYLING */
+.auth-card {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom Tabs Pill */
+.custom-tabs {
+    background-color: #0f1422;
+    border: 1px solid #1f2937;
+}
+
+.custom-tabs .nav-link {
+    color: #f8fafc !important; 
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.custom-tabs .nav-link.active {
+    background-color: #6258f5 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(98, 88, 245, 0.4);
+}
+
+/* Input Groups with Icons */
+.custom-input-group {
+    background-color: #172236;
+    border: 1px solid #2b3a53;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-input-group:focus-within {
+    border-color: #6258f5;
+    box-shadow: 0 0 0 3px rgba(98, 88, 245, 0.2);
+}
+
+.custom-input-group .input-group-text {
+    background-color: transparent !important;
+    border: none !important;
+    color: #7185a3;
+    padding-left: 14px;
+}
+
+.custom-input-group .form-control {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #f8fafc !important;
+    padding-left: 8px;
+}
+
+.custom-input-group .form-control:focus {
+    background-color: transparent !important;
+    color: #f8fafc !important;
+}
+
+.custom-input-group input:-webkit-autofill,
+.custom-input-group input:-webkit-autofill:hover, 
+.custom-input-group input:-webkit-autofill:focus,
+.custom-input-group input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #172236 inset !important;
+    -webkit-text-fill-color: #f8fafc !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* AYUSIN ANG SELECT DROPDOWN SA loob ng CUSTOM INPUT GROUP */
+.custom-input-group .form-select {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #f8fafc !important;
+    padding-left: 8px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 1rem center !important;
+    background-size: 16px 12px !important;
+}
+
+.custom-input-group .form-select option {
+    background-color: #111827 !important;
+    color: #f8fafc !important;
+}
+
+
